@@ -1,0 +1,34 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+.layout.light {
+  --background-color: #faebd7;
+  --text-color: #333;
+  --border-color: rgba(0,0,0,0.1);
+  --shadow-color: rgba(0,0,0,0.1);
+}
+
+.layout.dark {
+  --background-color: #000035;
+  --text-color: #fff;
+  --border-color: rgba(255,255,255,0.1);
+  --shadow-color: rgba(255,255,255,0.1);
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 100px; /* Space for tab bar */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+    padding-bottom: 80px;
+  }
+}

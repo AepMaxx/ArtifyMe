@@ -1,0 +1,273 @@
+.canvas-page {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+.canvas-page.light {
+  --background-color: #faebd7;
+  --text-color: #333;
+  --primary-color: #5800FF;
+  --third-color: #f3ccff;
+}
+
+.canvas-page.dark {
+  --background-color: #000035;
+  --text-color: #fff;
+  --primary-color: #5800FF;
+  --third-color: #f3ccff;
+}
+
+.canvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.canvas-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 2px solid var(--primary-color);
+  background: white;
+  color: var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.close-btn {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.close-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+.brush-preview {
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.drawing-canvas {
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  background: white;
+  cursor: crosshair;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.canvas-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.toolbar-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clear-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.clear-btn:hover {
+  background: #c82333;
+}
+
+.undo-btn {
+  background: #FBA834;
+  color: white;
+}
+
+.undo-btn:hover {
+  background: #e6992e;
+}
+
+.brush-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.brush-btn:hover {
+  background: #4a00d4;
+}
+
+.color-picker-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.color-picker-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.color-picker-content h3 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+.color-picker-content h4 {
+  margin: 20px 0 10px 0;
+  color: #333;
+}
+
+.brush-sizes {
+  margin-bottom: 20px;
+}
+
+.size-options {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.size-btn {
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.size-btn.active {
+  border-color: var(--primary-color);
+}
+
+.size-preview {
+  border-radius: 50%;
+}
+
+.color-options {
+  margin-bottom: 20px;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.color-btn {
+  width: 40px;
+  height: 40px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-btn.active {
+  border-color: #333;
+  transform: scale(1.1);
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background: #4a00d4;
+}
+
+@media (max-width: 768px) {
+  .canvas-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .canvas-controls {
+    gap: 10px;
+  }
+  
+  .control-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .drawing-canvas {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+  
+  .canvas-toolbar {
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .toolbar-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  .color-picker-content {
+    padding: 20px;
+  }
+  
+  .color-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

@@ -1,0 +1,43 @@
+.home {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+.home.light {
+  --background-color: #faebd7;
+  --text-color: #333;
+  --primary-color: #5800FF;
+  --third-color: #f3ccff;
+}
+
+.home.dark {
+  --background-color: #000035;
+  --text-color: #fff;
+  --primary-color: #5800FF;
+  --third-color: #f3ccff;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 15px;
+  }
+  
+  .home-title {
+    font-size: 1.25rem;
+  }
+}

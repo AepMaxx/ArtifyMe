@@ -1,0 +1,151 @@
+.artwork-detail-page {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+.artwork-detail-page.light {
+  --background-color: #faebd7;
+  --text-color: #333;
+  --primary-color: #5800FF;
+  --third-color: #f3ccff;
+}
+
+.artwork-detail-page.dark {
+  --background-color: #000035;
+  --text-color: #fff;
+  --primary-color: #5800FF;
+  --third-color: #f3ccff;
+}
+
+.artwork-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.artwork-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.artwork-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.back-btn {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.artwork-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.artwork-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.image-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.artwork-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.artwork-info {
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+
+.artwork-description h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.artwork-description p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.artwork-meta {
+  display: flex;
+  gap: 30px;
+}
+
+.meta-item {
+  color: #666;
+}
+
+.meta-item strong {
+  color: #333;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.error-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .artwork-detail-container {
+    padding: 15px;
+  }
+  
+  .artwork-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .artwork-content {
+    padding: 20px;
+  }
+  
+  .artwork-images {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .artwork-meta {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

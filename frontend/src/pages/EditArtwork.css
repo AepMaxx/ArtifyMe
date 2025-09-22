@@ -1,0 +1,143 @@
+.edit-artwork-page {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+.edit-artwork-page.light {
+  --background-color: #faebd7;
+  --text-color: #333;
+  --primary-color: #5800FF;
+  --third-color: #f3ccff;
+}
+
+.edit-artwork-page.dark {
+  --background-color: #000035;
+  --text-color: #fff;
+  --primary-color: #5800FF;
+  --third-color: #f3ccff;
+}
+
+.edit-artwork-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.edit-artwork-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.edit-artwork-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.back-btn {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.edit-artwork-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.artwork-preview {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.preview-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.preview-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.edit-form {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.error-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .edit-artwork-container {
+    padding: 15px;
+  }
+  
+  .edit-artwork-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .edit-artwork-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .artwork-preview,
+  .edit-form {
+    padding: 20px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}
